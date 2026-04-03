@@ -1,0 +1,80 @@
+/* ============================================
+   WEEKLY CHART PAGE STYLES
+   ============================================ */
+
+.chart-card {
+  margin-bottom: var(--sp-5);
+  animation: slideUp 0.4s ease;
+}
+
+.chart-title {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--text-secondary);
+  margin-bottom: var(--sp-4);
+}
+
+.chart-wrapper {
+  margin: 0 calc(var(--sp-3) * -1);
+}
+
+/* Custom tooltip */
+.chart-tooltip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--sp-2) var(--sp-3);
+  box-shadow: var(--shadow-md);
+}
+
+.chart-tooltip-label {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.chart-tooltip-value {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+}
+
+/* Stats Grid */
+.chart-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+}
+
+.chart-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-3) var(--sp-4);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.chart-stat-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.chart-stat-label {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.chart-stat-value {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+
+/* Recharts overrides */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: var(--border-color);
+  opacity: 0.5;
+}

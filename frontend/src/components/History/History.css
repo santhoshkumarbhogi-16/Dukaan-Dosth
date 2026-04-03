@@ -1,0 +1,95 @@
+/* ============================================
+   HISTORY PAGE STYLES
+   ============================================ */
+
+/* Search bar */
+.search-bar {
+  position: relative;
+  margin-bottom: var(--sp-3);
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--sp-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  z-index: 1;
+}
+
+.search-input {
+  padding-left: 40px !important;
+}
+
+/* Filter chips */
+.filter-chips {
+  display: flex;
+  gap: var(--sp-2);
+  overflow-x: auto;
+  padding-bottom: var(--sp-3);
+  margin-bottom: var(--sp-4);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.filter-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-chip {
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.filter-chip:hover {
+  border-color: var(--color-primary);
+  color: var(--text-secondary);
+}
+
+.filter-chip.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* History item extension */
+.history-item {
+  position: relative;
+}
+
+.history-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.history-delete {
+  color: var(--text-muted);
+  padding: 2px;
+  opacity: 0;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.history-item:hover .history-delete {
+  opacity: 1;
+}
+
+.history-delete:hover {
+  color: var(--color-danger) !important;
+}
+
+/* On mobile, always show delete */
+@media (max-width: 768px) {
+  .history-delete {
+    opacity: 0.5;
+  }
+}
